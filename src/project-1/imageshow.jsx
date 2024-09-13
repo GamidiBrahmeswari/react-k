@@ -5,7 +5,7 @@ class DisplayCards extends Component {
   state = {
     products: [],
     error: false,
-    selectproduct: null, 
+    selectProduct: null, 
   };
 
   componentDidMount = () => {
@@ -28,11 +28,11 @@ class DisplayCards extends Component {
   };
 
   selectProduct = (product) => {
-    this.setState({ selectproduct: product });
+    this.setState({ selectProduct: product });
   };
 
   render() {
-    const { products, error, selectproduct } = this.state;
+    const { products, error, selectProduct } = this.state;
     
     if (error) {
       return <h1>Failed to load the content</h1>;
@@ -88,16 +88,16 @@ class DisplayCards extends Component {
           )}
         </div>
 
-        {selectproduct && (
+        {selectProduct && (
           <div style={sidePanelStyle}>
-            <p>{selectproduct.title}</p>
+            <p>{selectProduct.title}</p>
             <img
-              src={selectproduct.images}
+              src={selectProduct.images}
               height={"80%"}
               width={"80%"}
-              alt={selectproduct.title}
+              alt={selectProduct.title}
             />
-            <p> Products name : { selectproduct.title}</p>
+            <p> Products name : { selectProduct.title}</p>
           </div>
         )}
       </div>
