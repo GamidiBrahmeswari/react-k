@@ -1,11 +1,12 @@
 
-import DisplayCards from "./project-1/imageshow"
+
+import { FormData } from "./project-2/form"
 
 
 const two=()=>{
 return(
     <>
-    <DisplayCards/>
+   <FormData/>
     </>
 )
 
